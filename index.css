@@ -1,0 +1,59 @@
+.centerDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 80vw;
+  max-width: 500px;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circleRounded {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  position: absolute;
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+}
+
+.personRoundContainer {
+  position: absolute;
+  width: 100%;
+  aspect-ratio: 1 / 2;
+  top: -100%;
+  z-index: 1;
+  border-bottom-left-radius: 100vw;
+  border-bottom-right-radius: 100vw;
+  overflow: hidden;
+}
+
+.personImage {
+  position: absolute;
+  width: 140%;
+  height: 60%;
+  bottom: 0;
+  left: -20%;
+  transition: width 1s ease-in;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 90vw;
+  }
+  .personImage {
+    width: 160%;
+    left: -30%;
+  }
+}
